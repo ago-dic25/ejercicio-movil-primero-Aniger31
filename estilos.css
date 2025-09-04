@@ -1,1 +1,97 @@
+/*Fuente y estilos generales*/
+body{
+    font-family: 'Roboto',sans-serif;
+    margin:0;
+    padding: 0;
+    background: #f5f5f5;
+}
+/*MENÚ*/
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+/*Estilo base menu vertical (celular)*/
+nav ul li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+
+/*Ocultar submenu por defecto*/
+nav ul li ul{
+    display: none;
+}
+
+/*Tarjetas*/
+section{
+    padding: 10px;
+}
+.tarjeta{
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.tarjeta img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-top:10px;
+    border-radius: 6px;
+}
+
+/*MEDIA QUERIES*/
+/*Tablet*/
+@media (min-width: 600px) and (max-width: 1023px){
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+        background: #fff;
+
+    }
+    nav ul li{
+        border: none;
+    }
+    /*tarjetas en dos columnas
+        1   2
+        3       */
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .tarjeta{
+        margin: 0;
+    }
+
+}
+
+/*Pantalla completa Escritorio*/
+@media (min-width: 1024px){
+    /*menu horizontal*/
+    nav ul{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        background: #fff;
+    }
+    nav ul li{
+        border: none;
+    }
+
+    /*Tarjetas en una sola fila */
+    section{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .tarjeta{
+        flex: 1;
+        max-width: 300px;
+    }
+}
